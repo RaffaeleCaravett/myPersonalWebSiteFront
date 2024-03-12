@@ -8,7 +8,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
 import { ToastrModule, provideToastr } from 'ngx-toastr';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,6 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     NavComponent,
     FooterComponent,
     HomeComponent,
-    SidebarComponent
   ],
   imports: [
     BrowserModule,

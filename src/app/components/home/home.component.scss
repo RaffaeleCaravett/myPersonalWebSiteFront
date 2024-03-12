@@ -1,0 +1,36 @@
+* {
+  font-family: "Numans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+h1{
+    font-size:100px;
+    line-height: 1.5;
+    font-family: "Numans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.title{
+  top:30%;
+}
+.bg-personal{
+  background:rgba(0,0,0, 0.5)
+}
+.col-md-4{
+  &:hover{
+    .bg-black{
+  transform: translateY(50px);
+transition: 2s;
+}
+    .bg-white{
+        transform: translateY(-50px);
+transition: 2s;
+    }
+  }
+  .bg-black{
+  transition: 2s;
+  }
+      .bg-white{
+  transition: 2s;
+      }
+}
+}
