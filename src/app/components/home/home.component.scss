@@ -59,4 +59,36 @@ transition: 2s;
     -webkit-background-clip: text;
     line-height: 1.2;
   }
+  .card {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+
+  .face {
+    width: 100%;
+    height: 100%;
+
+    color: #FFF;
+    line-height: 100px;
+    position:absolute;
+
+    backface-visibility: hidden;
+  }
+
+  .front {
+    background-color: blue;
+  }
+
+  .back {
+    background-color: red;
+    transform: rotateY(180deg);
+  }
+
+  .scene:hover .card {
+    transform: rotateY(180deg);
+  }
 }

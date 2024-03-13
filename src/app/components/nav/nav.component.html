@@ -2,7 +2,17 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <h1 class="text-light">Talks</h1>
+        <button mat-button [matMenuTriggerFor]="menu">
+        <h1 class="text-light">Talks
+        <img src="../../../assets/nav/arrow.webp" style="width: 30px;"  alt="">
+        </h1>
+        </button>
+        <mat-menu #menu="matMenu" class="bg-black text-light">
+          <button mat-menu-item class="text-light" [routerLink]="'/'">Home</button>
+          <button mat-menu-item class="text-light" [routerLink]="'/talks'">Talks</button>
+          <button mat-menu-item class="text-light" [routerLink]="'/about'">About the author</button>
+          <button mat-menu-item class="text-light" [routerLink]="'/contact'">Contact us</button>
+        </mat-menu>
       </div>
     </div>
   </div>
