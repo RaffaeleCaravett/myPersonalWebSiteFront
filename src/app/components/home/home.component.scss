@@ -9,6 +9,12 @@ h1{
     font-weight: 400;
     font-style: normal;
 }
+h2{
+  font-size:50px;
+  line-height: 1.5;
+  font-family: "Numans", sans-serif;
+  font-style: normal;
+}
 .title{
   top:30%;
 }
@@ -33,4 +39,19 @@ transition: 2s;
   transition: 2s;
       }
 }
+.g{
+  &:hover{
+    color:green;
+    transition:1s;
+  }
+  transition:1s;
+
+}
+  .r{
+    &:hover{
+      color: red;;
+      transition:1s;
+    }
+    transition:1s;
+  }
 }
