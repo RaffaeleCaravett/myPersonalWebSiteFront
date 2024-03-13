@@ -1,0 +1,66 @@
+* {
+  font-family: "Numans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+h1{
+    font-size:80px;
+    line-height: 1.5;
+    font-family: "Numans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h2{
+  line-height: 1.5;
+  font-family: "Numans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.p{
+  line-height: 1.5;
+  font-size: 24px!important;
+  font-weight: lighter;
+  color: rgb(102, 102, 102);
+}
+.bg{
+  background: url('../../../assets/homepage/homepage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+  position: fixed;
+  top:0;
+  z-index: -1;
+}
+.text-shadow{
+  text-shadow: 2px 2px 2px black;
+  &:nth-child(2){
+    line-height: 1.3;
+  }
+}
+.input-wrapper {
+  position: relative;
+}
+input {
+  border: 1px solid gray;
+  position: relative;
+  width: 100%;
+  line-height: 6ex;
+}
+label {
+  position: absolute;
+  top: -0.8ex;
+  z-index: 1;
+  left: 10%;
+  background-color: white;
+  font-size: 18px;
+}
+.bg-orange{
+  background: orange;
+}
+.img{
+  height: 50%;
+}
+.fs-5{
+  line-height: 1.2;
+}
+}
