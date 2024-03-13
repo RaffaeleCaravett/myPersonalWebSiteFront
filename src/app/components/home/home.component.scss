@@ -3,14 +3,14 @@
   font-weight: 400;
   font-style: normal;
 h1{
-    font-size:100px;
+    font-size:80px;
     line-height: 1.5;
     font-family: "Numans", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 h2{
-  font-size:50px;
+  font-size:40px;
   line-height: 1.5;
   font-family: "Numans", sans-serif;
   font-style: normal;
@@ -53,5 +53,10 @@ transition: 2s;
       transition:1s;
     }
     transition:1s;
+  }
+  .rainbow {
+    background-image: linear-gradient(to left, green, yellow, orange);
+    -webkit-background-clip: text;
+    line-height: 1.2;
   }
 }

@@ -1,7 +1,7 @@
 <div class="row">
-  <div class="position-relative">
-  <img src="assets/homepage/homepage.jpg" alt="" class="w-100 position-fixed top-0" style="height:90vh;z-index: -1;">
-  <div style="height: 90vh" class="position-relative row">
+  <div class="position-relative w-100">
+  <img src="assets/homepage/homepage.jpg" alt="" class="position-fixed top-0" [style.width.px]="windowWidth" style="height:90vh;z-index: -1;">
+  <div style="height: 90vh" class="position-relative row w-100">
     <div class="position-absolute title w-100">
 <h1 class="text-center py-5 text-light">Talks</h1>
   <p class="fs-4 text-center text-light">Talk giornalieri per ogni tipo di evenienza.</p>
@@ -13,7 +13,7 @@
       <div class="row">
  <div class="col-md-4 p-2 text-center text-light">
 <div class="bg-black p-3 w-75 m-auto">
-   <h2>Esperienza</h2>
+   <p class="fs-4">Esperienza</p>
 </div>
 <div class="bg-white p-3 text-black">
 <p class="fs-6">In Ogni talk che facciamo parliamo di cose realmente accadute e non di cose che pensiamo o che potrebbero accadere.
@@ -23,7 +23,7 @@ FATTI!
 </div>
 <div class="col-md-4 p-2 text-center text-light">
 <div class="bg-black p-3 w-75 m-auto">
-<h2>Persone reali</h2>
+<p class="fs-4">Persone reali</p>
 </div>
 <div class="bg-white p-3 text-black">
 <p class="fs-6">I talk vengono fatti da persone reali in tempo reale! Non sono discorsi buttati giù dall'Intelligenza Artificiale! EMOZIONI!</p>
@@ -31,7 +31,7 @@ FATTI!
 </div>
 <div class="col-md-4 p-2 text-center text-light">
 <div class="bg-black p-3 w-75 m-auto">
-<h2>Risultati</h2>
+<p class="fs-4">Risultati</p>
 </div>
 <div class="bg-white p-3 text-black">
 <p class="fs-6">I nostri ospiti sono persone che hanno ottenuto risultati nel loro ambito lavorativo,nella vita,nelle relazioni. RISULATI!</p>
@@ -76,36 +76,49 @@ FATTI!
   <p class="fs-4">
     Tutti i nostri talk sono gratis ed accessibili in qualsiasi momento.
   </p>
+  <img src="assets/homepage/nomoney.gif" class=" m-auto" alt="">
 </div>
   </div>
-  <div class="container text-center">
+  <div class="container text-center overflow-auto">
     <div class="row py-5">
       <div class="col-md-12 py-5">
-<h2>Dove puoi trovarci?</h2>
+<h2>Siamo presenti su più social</h2>
       </div>
-      <div class="col-lg-4">
-        <img src="../../../assets/homepage/instagram_2111463.png" class="w-50" alt="">
+      <div class="col-lg-4 py-5">
+        <img src="assets/homepage/instagram_2111463.png" class="w-50" alt="">
         <h2>Instagram</h2>
        </div>
-      <div class="col-lg-4">
-        <img src="../../../assets/homepage/youtube_4494485.png" class="w-50" alt="">
+      <div class="col-lg-4 py-5">
+        <img src="assets/homepage/youtube_4494485.png" class="w-50" alt="">
         <h2>Youtube</h2>
       </div>
-      <div class="col-lg-4">
-        <img src="../../../assets/homepage/facebook (1).png" class="w-50" alt="">
+      <div class="col-lg-4 py-5">
+        <img src="assets/homepage/facebook (1).png" class="w-50" alt="">
         <h2>Facebook</h2>
       </div>
-      <div class="col-lg-4">
-<img src="../../../assets/homepage/LinkedIn.webp" class="w-50" alt="">
+      <div class="col-lg-4 py-5">
+<img src="assets/homepage/LinkedIn.webp" class="w-50" alt="">
 <h2>Linkedin</h2>
 </div>
-<div class="col-lg-4">
-  <img src="../../../assets/homepage/tiktok.webp" class="w-50" alt="">
+<div class="col-lg-4 py-5">
+  <img src="assets/homepage/tiktok.webp" class="w-50" alt="">
   <h2>TikTok</h2>
   </div>
-  <div class="col-lg-4">
-    <img src="../../../assets/homepage/twitch.png" class="w-50" alt="">
+  <div class="col-lg-4 py-5">
+    <img src="assets/homepage/twitch.png" class="w-50" alt="">
     <h2>Twitch</h2>
+    </div>
+    <div class="col-md-6 py-5">
+      <h2>Abbiamo una missione 🎯</h2>
+    </div>
+    <div class="col-md-6 py-5">
+      <img src="assets/homepage/mission.webp" data-aos="fade-left" data-aos-duration="2000" alt="">
+    </div>
+    <div class="col-md-12">
+      <h2>Che missione abbiamo?</h2>
+      <p class="fs-5">
+      <span class="rainbow fw-bold border-bottom"> Essere un faro per chi sta cercando la luce.</span>
+      </p>
     </div>
     </div>
   </div>
