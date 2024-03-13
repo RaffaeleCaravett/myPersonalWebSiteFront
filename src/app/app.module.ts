@@ -11,6 +11,10 @@ import { ToastrModule, provideToastr } from 'ngx-toastr';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { TalkComponent } from './talk/talk.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,10 @@ import {MatIconModule} from '@angular/material/icon';
     NavComponent,
     FooterComponent,
     HomeComponent,
+    TalkComponent,
+    AboutComponent,
+    ContactComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
