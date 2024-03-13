@@ -109,5 +109,11 @@ transition: 2s;
   }
   overflow-x: hidden;
   overflow-y:hidden;
+  .text-shadow{
+text-shadow: 2px 2px 2px black;
+&:nth-child(2){
+  line-height: 1.3;
+}
+  }
 }
 
