@@ -91,4 +91,23 @@ transition: 2s;
   .scene:hover .card {
     transform: rotateY(180deg);
   }
+.bg{
+    background: url('../../../assets/homepage/homepage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+    position: fixed;
+    top:0;
+    z-index: -1;
+  }
+  .height{
+    height: 80vh;
+    h1,p{
+      margin-top: 5%;
+    }
+  }
+  overflow-x: hidden;
+  overflow-y:hidden;
 }
+
