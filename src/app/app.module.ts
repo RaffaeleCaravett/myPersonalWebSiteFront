@@ -15,6 +15,7 @@ import { TalkComponent } from './components/talk/talk.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     ToastrModule.forRoot(),
     MatMenuModule,
     MatButtonModule,
-  MatIconModule  ],
+  MatIconModule,
+ReactiveFormsModule  ],
   providers: [
     provideAnimations(),
     provideToastr(),

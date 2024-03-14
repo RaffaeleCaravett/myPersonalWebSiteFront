@@ -1,1 +1,61 @@
-<p>contact works!</p>
+<div class="row p-0 m-0 text-center" >
+  <div class="col-md-12 bg w-100">
+  </div>
+  <div class="py-5 my-5 col-md-12 height">
+  <h1 class="text-center py-5 text-light text-shadow">Contatti</h1>
+    <p class="fs-4 text-center text-light text-shadow">"Sporgiti un po' più in la', troverai la mia mano tesa verso di te."</p>
+  </div>
+  <div class="col-md-12 bg-white py-5">
+    <h2>Vuoi fare un talk con noi?</h2>
+    <p class="fs-5">
+      Siamo alla continua ricerca di ospiti da invitare nei nostri talk. Siamo convinti che fare network, creare unione, diffondere informazioni e conoscenze possa generare molto più
+      di quanto possiamo immaginare. Per questo abbiamo creato questa sezione dove dopo un paio di passaggi puoi entrare in contatto con noi, e se ci sono le condizioni possiamo tranquillamente
+      fare un talk insieme. Per noi è un orgoglio. Ti basta solo inserire i dati richiesti nel form qui sotto ed inserire il codice che ti mostreremo dopo che avrai confermato lo stesso.
+       Una volta inserito puoi mandarci la mail con le seguenti informazioni :
+    </p>
+     <ol class="w-50 m-auto">
+        <li>Nome e cognome</li>
+        <li>Breve descrizione di te</li>
+        <li>Cosa fai e di cosa ti occupi</li>
+        <li>Un recapito telefonico, una mail o un qualsiasi canale di contatto</li>
+      </ol>
+  </div>
+  <div class="col-md-12 py-5 bg-white">
+<form [formGroup]="contactForm">
+<div class="row w-75 m-auto">
+  <div class="col-md-6 p-3">
+<label for="">Nome</label>
+<input type="text" class="w-100" formControlName="nome">
+<p *ngIf="submitted&&contactForm.controls['nome'].invalid" class="text-danger">Nome necessario.</p>
+  </div>
+  <div class="col-md-6 p-3">
+<label for="">Cognome</label>
+<input type="text" class="w-100" formControlName="cognome">
+<p *ngIf="submitted&&contactForm.controls['cognome'].invalid" class="text-danger">Cognome necessario.</p>
+  </div>
+  <div class="col-md-12 p-3">
+<label for="">Email</label>
+<input type="email" class="w-100" formControlName="email">
+<p *ngIf="submitted&&contactForm.controls['email'].invalid" class="text-danger">Email necessaria.</p>
+  </div>
+  <div class="col-md-6 p-3">
+   <label for="">Eta</label>
+   <input type="number" class="w-100" formControlName="eta">
+   <p *ngIf="submitted&&contactForm.controls['eta'].invalid" class="text-danger">Età necessaria.</p>
+  </div>
+  <div class="col-md-6 p-3">
+    <label for="">Professione</label>
+    <input type="text" class="w-100" formControlName="professione">
+    <p *ngIf="submitted&&contactForm.controls['professione'].invalid" class="text-danger">Professione necessaria.</p>
+  </div>
+  <div class="col-md-12 p-3">
+    <label for="">Link ad un tuo profilo social (Instragram - Linkedin)</label>
+    <input type="email" class="w-100" formControlName="link">
+    <p *ngIf="submitted&&contactForm.controls['link'].invalid" class="text-danger">Link necessario.</p>
+      </div>
+</div>
+<button class="btn" (click)="richiediCodice()">Richiedi codice</button>
+</form>
+  </div>
+</div>
+

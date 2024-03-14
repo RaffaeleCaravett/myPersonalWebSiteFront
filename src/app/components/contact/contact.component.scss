@@ -1,0 +1,43 @@
+* {
+  font-family: "Numans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  .height{
+    height: 80vh;
+  }
+h1{
+    font-size:50px;
+    line-height: 1.5;
+    font-family: "Numans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h2{
+  line-height: 1.5;
+  font-family: "Numans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.p{
+  line-height: 1.5;
+  font-size: 24px!important;
+  font-weight: lighter;
+  color: rgb(102, 102, 102);
+}
+.bg{
+  background: url('../../../assets/homepage/homepage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+  position: fixed;
+  top:0;
+  z-index: -1;
+}
+.text-shadow{
+  text-shadow: 2px 2px 2px black;
+  &:nth-child(2){
+    line-height: 1.3;
+  }
+}
+}
