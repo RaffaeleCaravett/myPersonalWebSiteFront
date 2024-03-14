@@ -1,1 +1,29 @@
-<p>talk works!</p>
+<div class="row p-0 m-0 text-center" >
+  <div class="col-md-12 bg w-100">
+  </div>
+  <div class="py-5 my-5 col-md-12 height">
+  <h1 class="text-center py-5 text-light text-shadow">Talks</h1>
+    <p class="fs-4 text-center text-light text-shadow">"Da soli si va veloci, insieme si va lontano"</p>
+  </div>
+  <div class="col-md-12 py-5 bg-white">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Qui trovi i nostri talk</h2>
+        <p class="fs-5">Puoi filtrarli per categoria,titolo, o autore.</p>
+      </div>
+      <div class="col-md-12">
+<form [formGroup]="filtriForm">
+  <div class="row m-auto">
+    <div class="col-md-2 form-check" *ngFor="let c of categories,index as i">
+      <div class="m-auto w-50">
+        <input type="checkbox" class="form-check-input" id="exampleCheck{{i}}">
+      <label class="form-check-label" for="exampleCheck{{i}}">{{c}}</label>
+      </div>
+    </div>
+  </div>
+
+</form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -35,8 +35,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ToastrModule.forRoot(),
     MatMenuModule,
     MatButtonModule,
-  MatIconModule,
-ReactiveFormsModule  ],
+    MatIconModule,
+    ReactiveFormsModule
+    ],
   providers: [
     provideAnimations(),
     provideToastr(),
