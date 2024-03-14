@@ -13,7 +13,8 @@
       </div>
       <div class="col-md-12">
 <form [formGroup]="filtriForm">
-  <div class="row m-auto">
+  <div class="row m-auto py-5">
+    <h2>Scegli la categoria</h2>
     <div class="col-md-2 form-check" *ngFor="let c of categories,index as i">
       <div class="m-auto w-50">
         <input type="checkbox" class="form-check-input" id="exampleCheck{{i}}">
