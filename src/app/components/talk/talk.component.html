@@ -17,7 +17,7 @@
     <h2>Scegli la categoria</h2>
     <div class="col-md-2 form-check" *ngFor="let c of categories,index as i">
       <div class="m-auto w-50">
-        <input type="checkbox" class="form-check-input" id="exampleCheck{{i}}" formControlName="categoria">
+        <input type="radio" value="{{c}}" class="form-check-input" id="exampleCheck{{i}}" formControlName="categoria" (change)="searchTalks()">
       <label class="form-check-label" for="exampleCheck{{i}}">{{c}}</label>
       </div>
     </div>
@@ -25,13 +25,13 @@
       <div class="p-2">
         <label for="" class="fs-5">Titolo</label>
       </div>
-<input type="text" formControlName="titolo" class="w-75">
+<input type="text" formControlName="titolo" class="w-75" (input)="searchTalks()">
     </div>
     <div class="col-md-4">
       <div class="p-2">
 <label for="" class="fs-5">Autore</label>
       </div>
-<select name="" id="" formControlName="autore" class="w-75">
+<select name="" id="" formControlName="autore" class="w-75" (change)="searchTalks()">
   <option value=""></option>
 </select>
     </div>
@@ -39,12 +39,11 @@
       <div class="p-2">
 <label for="" class="fs-5">Data pubblicazione</label>
       </div>
-<select name="" id="" formControlName="data" class="w-75">
+<select name="" id="" formControlName="data" class="w-75" (change)="searchTalks()">
   <option value=""></option>
 </select>
 </div>
-  </div>
-
+</div>
 </form>
       </div>
     </div>
