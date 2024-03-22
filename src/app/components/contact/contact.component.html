@@ -48,10 +48,18 @@
     <input type="text" class="w-100" formControlName="professione">
     <p *ngIf="submitted&&contactForm.controls['professione'].invalid" class="text-danger">Professione necessaria.</p>
   </div>
-  <div class="col-md-12 p-3">
+  <div class="col-md-6 p-3">
     <label for="">Link ad un tuo profilo social (Instragram - Linkedin)</label>
     <input type="email" class="w-100" formControlName="link">
     <p *ngIf="submitted&&contactForm.controls['link'].invalid" class="text-danger">Link necessario.</p>
+      </div>
+      <div class="col-md-6 p-3">
+        <label for="">Scegli la categoria di interesse</label>
+       <select name="" id=""  class="w-100" formControlName="categoria">
+        <option value=""></option>
+        <option value="{{categoria}}" *ngFor="let categoria of categorie">{{categoria}}</option>
+       </select>
+        <p *ngIf="submitted&&contactForm.controls['categoria'].invalid" class="text-danger">Categoria necessaria.</p>
       </div>
 </div>
 <button class="btn" (click)="richiediCodice()">Richiedi codice</button>
