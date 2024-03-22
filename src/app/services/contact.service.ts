@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { environment } from "../core/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +10,14 @@ import { Injectable } from "@angular/core";
 export class ContactService{
 
 private auth:string='/auth'
-private categoria:string='/categoria'
+private categorie:string='/categorie'
 
 constructor(private http:HttpClient){}
 
+
+
+getAllCategories(){
+  return this.http.get(environment.API_URL+this.auth+this.categorie)
+}
 
 }

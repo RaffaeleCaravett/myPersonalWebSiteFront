@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +12,7 @@ export class ContactComponent implements OnInit {
 contactForm!:FormGroup
 submitted:boolean=false
 categorie:any[]=[]
-constructor(){}
+constructor(private contactService:ContactService,private toastr:ToastrService){}
 
 ngOnInit(): void {
 this.contactForm=new FormGroup({
@@ -21,6 +23,20 @@ this.contactForm=new FormGroup({
   professione:new FormControl('',Validators.required),
   link:new FormControl('',Validators.required),
   categoria:new FormControl('',Validators.required)
+})
+this.contactService.getAllCategories().subscribe({
+  next:(categories:any)=>{
+  if(categories){
+    this.categorie=categories
+  }else{
+this.toastr.show("Problema nel reperire le categorie.")
+}
+  },
+error:(err:any)=>{
+  this.toastr.show(err.error.messsage||"Problema nel reperire le categorie.")
+
+},
+complete:()=>{}
 })
 }
 
