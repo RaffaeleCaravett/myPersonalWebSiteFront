@@ -66,5 +66,17 @@
 <button class=" py-2 px-4 bg-warning border shadow-sm border-none" (click)="richiediCodice()">Richiedi codice</button>
 </form>
   </div>
+  <div class="col-md-12 py-3 bg-white">
+<div class="row">
+  <div class="col-md-3 p-2" *ngFor="let n of randomNumbers">
+  <div class="border p-2 text-center fs-5">
+{{n}}
+  </div>
+  </div>
+  <div class="col-md-12 py-4 " *ngIf="randomNumbers.length>0">
+    <button class=" py-2 px-4 bg-warning border shadow-sm border-none" [disabled]="randomNumbers.length==0" (click)="verificaCodice()">Verifica codice e invia la richiesta</button>
+  </div>
+</div>
+  </div>
 </div>
 

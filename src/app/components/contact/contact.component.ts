@@ -14,6 +14,7 @@ submitted:boolean=false
 categorie:any[]=[]
 isHuman:boolean=false
 randomNumbers:number[]=[]
+verificaNumbersForm!:FormGroup
 constructor(private contactService:ContactService,private toastr:ToastrService){}
 
 ngOnInit(): void {
@@ -26,6 +27,14 @@ this.contactForm=new FormGroup({
   link:new FormControl('',Validators.required),
   categoria:new FormControl('',Validators.required)
 })
+
+this.verificaNumbersForm=new FormGroup ({
+numero1 : new FormControl('',Validators.required),
+numero2 : new FormControl('',Validators.required),
+numero3 : new FormControl('',Validators.required),
+numero4 : new FormControl('',Validators.required),
+})
+
 this.contactService.getAllCategories().subscribe({
   next:(categories:any)=>{
   if(categories){
@@ -45,20 +54,30 @@ complete:()=>{}
 
 richiediCodice(){
 let array:number[]=[]
-  for(let i=0 ;i<=4;i++){
+  for(let i=0 ;i<=3;i++){
 array.push(Math.round(Math.random()*99))
 this.randomNumbers=array
 }
 }
 
 verificaCodice(){
-  if()
+  if(this.randomNumbers.length>0){
+if(this.randomNumbers[0]==this.verificaNumbersForm.controls['numero1'].value&&
+this.randomNumbers[0]==this.verificaNumbersForm.controls['numero2'].value&&
+this.randomNumbers[0]==this.verificaNumbersForm.controls['numero3'].value&&
+this.randomNumbers[0]==this.verificaNumbersForm.controls['numero4'].value){
+  this.inviaRihiestaTalk()
+}else{
+  this.toastr.show("I codici non coincidono, riprova o richiedi un nuovo codice")
+}
+  }
 }
 
 inviaRihiestaTalk(){
   this.submitted=true
-  if(this.contactForm.valid&&isHuman){
-    this.contactService.postRichiesta
+  if(this.contactForm.valid&&this.isHuman){
+    console.log('ok')
+    this.contactService.postRichiestaTalk({})
   }
 }
 }
