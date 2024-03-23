@@ -61,6 +61,12 @@
        </select>
         <p *ngIf="submitted&&contactForm.controls['categoria'].invalid" class="text-danger">Categoria necessaria.</p>
       </div>
+      <div class="col-md-12 p-3">
+        <label for="">Breve descrizione di quello che vorresti parlare</label>
+        <input type="email" class="w-100" formControlName="testo">
+        <p *ngIf="submitted&&contactForm.controls['testo'].invalid" class="text-danger">Testo necessario.</p>
+        <p *ngIf="contactForm.controls['testo'].value&&contactForm.controls['testo'].value.length>255" class="text-danger">Max. 255 caratteri</p>
+          </div>
 </div>
 <hr class="w-50 m-auto my-4">
 <button class=" py-2 px-4 bg-warning border shadow-sm border-none" (click)="richiediCodice()">Richiedi codice</button>

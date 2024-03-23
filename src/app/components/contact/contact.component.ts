@@ -25,7 +25,8 @@ this.contactForm=new FormGroup({
   email:new FormControl('',[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
   professione:new FormControl('',Validators.required),
   link:new FormControl('',Validators.required),
-  categoria:new FormControl('',Validators.required)
+  categoria:new FormControl('',Validators.required),
+  testo:new FormControl('', [Validators.required,Validators.maxLength(255)])
 })
 
 this.verificaNumbersForm=new FormGroup ({
@@ -77,8 +78,29 @@ this.randomNumbers[3]==this.verificaNumbersForm.controls['numero4'].value){
 inviaRihiestaTalk(){
   this.submitted=true
   if(this.contactForm.valid&&this.isHuman){
-    console.log('ok')
-    this.contactService.postRichiestaTalk({})
+    this.contactService.postRichiestaTalk(
+      {
+nome:this.contactForm.controls['nome'].value,
+cognome:this.contactForm.controls['cognome'].value,
+email:this.contactForm.controls['email'].value,
+testo:this.contactForm.controls['testo'].value,
+linkProfilo:this.contactForm.controls['link'].value,
+professione:this.contactForm.controls['professione'].value,
+eta:this.contactForm.controls['eta'].value,
+categoria:this.contactForm.controls['categoria'].value
+}
+      ).subscribe({
+        next:(richiesta:any)=>{
+this.toastr.success("Richiesta invitata")
+this.contactForm.reset()
+this.verificaNumbersForm.reset()
+this.isHuman=false
+this.submitted=false
+this.randomNumbers=[]
+      },
+    error:(err:any)=>{
+      this.toastr.show(err.error.message||'Qualcosa è andato storto nel salvataggio della richiesta.')
+    }})
   }else{
     this.toastr.show("Sembra che il form sia invalido")
   }

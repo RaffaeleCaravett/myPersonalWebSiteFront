@@ -11,7 +11,7 @@ export class ContactService{
 
 private auth:string='/auth'
 private categorie:string='/categorie'
-private richiestaTalk:string='/richiestaTalk'
+private richiestaTalk:string='/richiesteTalk'
 constructor(private http:HttpClient){}
 
 
@@ -21,7 +21,7 @@ getAllCategories(){
 }
 
 postRichiestaTalk(richiestaTalk:{}){
-  return this.http.post(environment.API_URL+this.richiestaTalk,richiestaTalk)
+  return this.http.post(environment.API_URL+this.auth+this.richiestaTalk,richiestaTalk)
 }
 
 }
