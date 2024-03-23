@@ -16,7 +16,7 @@
   <div class="row m-auto py-5">
     <h2>Scegli la categoria</h2>
     <div class="col-md-2 form-check" *ngFor="let c of categories,index as i">
-      <div class="m-auto w-50">
+      <div class="m-auto w-50 py-3">
         <input type="radio" value="{{c}}" class="form-check-input" id="exampleCheck{{i}}" formControlName="categoria" (change)="searchTalks()">
       <label class="form-check-label" for="exampleCheck{{i}}">{{c}}</label>
       </div>

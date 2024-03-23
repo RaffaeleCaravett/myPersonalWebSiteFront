@@ -12,6 +12,8 @@ export class ContactComponent implements OnInit {
 contactForm!:FormGroup
 submitted:boolean=false
 categorie:any[]=[]
+isHuman:boolean=false
+randomNumbers:number[]=[]
 constructor(private contactService:ContactService,private toastr:ToastrService){}
 
 ngOnInit(): void {
@@ -42,7 +44,21 @@ complete:()=>{}
 
 
 richiediCodice(){
-this.submitted=true
+let array:number[]=[]
+  for(let i=0 ;i<=4;i++){
+array.push(Math.round(Math.random()*99))
+this.randomNumbers=array
+}
 }
 
+verificaCodice(){
+  if()
+}
+
+inviaRihiestaTalk(){
+  this.submitted=true
+  if(this.contactForm.valid&&isHuman){
+    this.contactService.postRichiesta
+  }
+}
 }
