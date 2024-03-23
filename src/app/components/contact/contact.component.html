@@ -74,6 +74,29 @@
   </div>
   </div>
   <div class="col-md-12 py-4 " *ngIf="randomNumbers.length>0">
+    <p class="fs-5 y-2">Effettuiamo questa verifica solo accertarci che tu sia un essere umano</p>
+    <form class="row" [formGroup]="verificaNumbersForm">
+    <div class="col-md-3 p-2">
+      <div class="border p-2 text-center fs-5">
+<input type="text" class="border-input text-center w-100" formControlName="numero1">
+      </div>
+    </div>
+    <div class="col-md-3 p-2">
+      <div class="border p-2 text-center fs-5">
+<input type="text" class="border-input text-center w-100" formControlName="numero2">
+      </div>
+    </div>
+    <div class="col-md-3 p-2">
+      <div class="border p-2 text-center fs-5">
+<input type="text" class="border-input text-center w-100" formControlName="numero3">
+      </div>
+    </div>
+    <div class="col-md-3 p-2">
+      <div class="border p-2 text-center fs-5">
+<input type="text" class="border-input text-center w-100" formControlName="numero4">
+      </div>
+    </div>
+    </form>
     <button class=" py-2 px-4 bg-warning border shadow-sm border-none" [disabled]="randomNumbers.length==0" (click)="verificaCodice()">Verifica codice e invia la richiesta</button>
   </div>
 </div>

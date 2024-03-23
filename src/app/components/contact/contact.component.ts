@@ -63,9 +63,10 @@ this.randomNumbers=array
 verificaCodice(){
   if(this.randomNumbers.length>0){
 if(this.randomNumbers[0]==this.verificaNumbersForm.controls['numero1'].value&&
-this.randomNumbers[0]==this.verificaNumbersForm.controls['numero2'].value&&
-this.randomNumbers[0]==this.verificaNumbersForm.controls['numero3'].value&&
-this.randomNumbers[0]==this.verificaNumbersForm.controls['numero4'].value){
+this.randomNumbers[1]==this.verificaNumbersForm.controls['numero2'].value&&
+this.randomNumbers[2]==this.verificaNumbersForm.controls['numero3'].value&&
+this.randomNumbers[3]==this.verificaNumbersForm.controls['numero4'].value){
+  this.isHuman=true
   this.inviaRihiestaTalk()
 }else{
   this.toastr.show("I codici non coincidono, riprova o richiedi un nuovo codice")
@@ -78,6 +79,8 @@ inviaRihiestaTalk(){
   if(this.contactForm.valid&&this.isHuman){
     console.log('ok')
     this.contactService.postRichiestaTalk({})
+  }else{
+    this.toastr.show("Sembra che il form sia invalido")
   }
 }
 }
